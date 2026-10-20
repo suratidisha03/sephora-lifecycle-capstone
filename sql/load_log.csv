@@ -1,0 +1,7 @@
+load_date,source_file,table_name,rows_loaded,load_method,rerun_or_first_load,notes
+2026-10-08,data/raw/public/product_info.csv,public_raw_products,8494,DB Browser for SQLite: Import Table from CSV; header row on; comma; double quote; UTF-8; trim off,first load,27 columns
+2026-10-08,data/raw/public/reviews_0-250.csv,public_raw_reviews_1,602130,DB Browser for SQLite: same settings,first load,Unnamed first column imported as field1 (row number; not a review ID)
+2026-10-09,data/raw/public/reviews_250-500.csv,public_raw_reviews_2,206725,DB Browser for SQLite: same settings,first load,
+2026-10-09,data/raw/public/reviews_500-750.csv,public_raw_reviews_3,116262,DB Browser for SQLite: same settings,first load,
+2026-10-09,data/raw/public/reviews_750-1250.csv,public_raw_reviews_4,119317,DB Browser for SQLite: same settings,first load,
+2026-10-09,data/raw/public/reviews_1250-end.csv,public_raw_reviews_5,49977,DB Browser for SQLite: same settings,first load,
