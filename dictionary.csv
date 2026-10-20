@@ -1,0 +1,20 @@
+source_file,source_column,normalized_column,type,definition,example,missing_value_rule,evidence_layer
+product_info.csv,product_id,public_products.product_id,TEXT,Sephora product ID; join key to reviews,P7880,Never missing (QA-07: 0 duplicate IDs),public
+product_info.csv,product_name,public_products.product_name,TEXT,Product name as listed on Sephora in March 2023,Soy Hydrating Gentle Face Cleanser,Keep as is,public
+product_info.csv,brand_name,public_products.brand_name,TEXT,Brand name,fresh,Keep as is,public
+product_info.csv,primary_category,public_products.primary_category,TEXT,Top-level category; filtered to Skincare,Skincare,Filter only,public
+product_info.csv,secondary_category,public_products.secondary_category,TEXT,Second-level category,Cleansers,Keep as is,public
+product_info.csv,tertiary_category,public_products.tertiary_category,TEXT,Third-level category; scope = Face Wash & Cleansers or Moisturizers,Moisturizers,Filter only,public
+product_info.csv,price_usd,public_products.price_usd,REAL,Listed price in USD at time of collection (March 2023),39.0,Blank becomes NULL; never 0,public
+product_info.csv,rating,public_products.product_level_rating,REAL,Sephora's overall product rating; never averaged together with review rows,4.36,Blank becomes NULL; never 0,public
+(derived),(none),public_products.is_focal,INTEGER,1 = one of the 3 focal products (P7880; P248407; P427421); 0 = other in-scope product,1,Never missing,public
+reviews_*.csv,author_id,public_reviews.author_id,TEXT,Anonymous reviewer ID; never published or copied to CRM or Mailchimp,1741593524,Keep as text,public
+reviews_*.csv,product_id,public_reviews.product_id,TEXT,Product reviewed; joins to public_products,P427421,Never missing (QA-07: 0 unmatched),public
+reviews_*.csv,rating,public_reviews.rating,REAL,Star rating given by the reviewer (1 to 5),5.0,Blank becomes NULL; 0 missing in clean table,public
+reviews_*.csv,is_recommended,public_reviews.is_recommended,REAL,1.0 = reviewer recommends; 0.0 = does not,1.0,Left blank; 1153 of 9999 missing (11.5%); report findings among reviewers who answered,public
+reviews_*.csv,submission_time,public_reviews.review_date,TEXT (YYYY-MM-DD),Date the review was posted; no time of day in source,2023-03-21,0 bad dates (QA-07); range 2016-01-11 to 2023-03-21,public
+reviews_*.csv,skin_type,public_reviews.skin_type,TEXT,Self-reported skin type (e.g. dry; oily; combination; normal),combination,Left blank; 862 of 9999 missing (8.6%); describes this sample only,public
+reviews_*.csv,skin_tone,public_reviews.skin_tone,TEXT,Self-reported skin tone; unverified values,light,Left blank; not yet checked,public
+reviews_*.csv,review_title,public_reviews.review_title,TEXT,Title the reviewer gave the review,Love it,Left blank,public
+reviews_*.csv,review_text,public_reviews.review_text,TEXT,Full review text; paraphrase only in published work,(not reproduced),Left blank; 10 of 9999 missing (0.1%),public
+(derived),(none),public_reviews.source_file,TEXT,Which raw review file the row came from,reviews_0-250,Never missing,public
