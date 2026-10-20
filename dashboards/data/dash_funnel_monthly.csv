@@ -1,0 +1,34 @@
+month,channel,tag_status,sessions,viewed,carted,checked_out,purchased
+2026-01-01,direct,Non-paid,1460,740,152,78,32
+2026-01-01,email,Non-paid,20,15,5,2,2
+2026-01-01,organic_search,Non-paid,2692,1410,322,158,59
+2026-01-01,organic_social,Non-paid,814,423,82,41,19
+2026-01-01,paid_search,Tagged campaign,1578,833,213,132,62
+2026-01-01,paid_social,Tagged campaign,1596,796,178,90,37
+2026-01-01,referral,Non-paid,580,289,60,33,17
+2026-01-01,unassigned,"Lost tag (paid click, no campaign ID)",114,50,9,7,3
+2026-02-01,direct,Non-paid,1483,788,196,125,64
+2026-02-01,email,Non-paid,6,3,0,0,0
+2026-02-01,organic_search,Non-paid,2503,1307,289,127,61
+2026-02-01,organic_social,Non-paid,794,431,93,48,21
+2026-02-01,referral,Non-paid,479,276,60,28,18
+2026-03-01,direct,Non-paid,1763,932,215,129,75
+2026-03-01,email,Non-paid,9,3,1,1,1
+2026-03-01,organic_search,Non-paid,3072,1573,377,208,87
+2026-03-01,organic_social,Non-paid,874,452,86,52,21
+2026-03-01,referral,Non-paid,592,324,75,36,16
+2026-04-01,direct,Non-paid,1825,960,242,167,86
+2026-04-01,email,Non-paid,8,5,2,1,1
+2026-04-01,organic_search,Non-paid,2918,1527,354,207,94
+2026-04-01,organic_social,Non-paid,818,415,93,48,15
+2026-04-01,referral,Non-paid,567,297,71,40,19
+2026-05-01,direct,Non-paid,1965,1013,228,139,84
+2026-05-01,email,Non-paid,4,3,0,0,0
+2026-05-01,organic_search,Non-paid,3140,1595,339,186,90
+2026-05-01,organic_social,Non-paid,801,403,94,38,15
+2026-05-01,referral,Non-paid,550,289,66,40,15
+2026-06-01,direct,Non-paid,2322,1227,299,170,94
+2026-06-01,email,Non-paid,17,9,6,5,4
+2026-06-01,organic_search,Non-paid,3355,1737,456,233,99
+2026-06-01,organic_social,Non-paid,765,376,84,36,22
+2026-06-01,referral,Non-paid,516,251,63,38,18
