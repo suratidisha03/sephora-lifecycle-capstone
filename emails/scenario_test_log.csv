@@ -1,0 +1,11 @@
+contact_id,scenario,expected,actual,cart_links_used,rules_fired,status
+RG01,Baseline welcome,EM-01@2026-10-14 | EM-02@2026-10-16 | EM-03@2026-10-19,EM-01@2026-10-14 | EM-02@2026-10-16 | EM-03@2026-10-19,,,Pass
+RG02,S1 buys before email 2,EM-01@2026-10-14 | EM-06@2026-12-14 | EM-07@2026-12-21,EM-01@2026-10-14 | EM-06@2026-12-14 | EM-07@2026-12-21,,"R2: EM-02 cancelled, purchase ; R2: EM-03 cancelled, purchase",Pass
+RG03,S2 unsubscribes,EM-01@2026-10-14,EM-01@2026-10-14,,"R1: EM-02 blocked, unsubscribed ; R1: EM-03 blocked, unsubscribed",Pass
+RG04,Priority and cap check,EM-01@2026-10-13 | EM-04@2026-10-14 | EM-05@2026-10-15 | EM-02@2026-10-20 | EM-03@2026-10-22,EM-01@2026-10-13 | EM-04@2026-10-14 | EM-05@2026-10-15 | EM-02@2026-10-20 | EM-03@2026-10-22,EM-04->cart/RG04-a; EM-05->cart/RG04-a,R3/R4: EM-02 moved 10-15 to 10-20 ; R3/R4: EM-03 moved 10-18 to 10-22,Pass
+RG05,S3 second cart mid-flow,EM-04@2026-10-14 | EM-05@2026-10-15,EM-04@2026-10-14 | EM-05@2026-10-15,EM-04->cart/RG05-a; EM-05->cart/RG05-b,"R6: cart at 10-15 08:00 inside cooldown, no restart",Pass
+RG06,S5 missing cart link,no emails,no emails,,"R5: EM-04 held, missing cart link ; R5: EM-05 held, missing cart link",Pass
+RG07,Baseline first-time buyer,EM-06@2026-11-29 | EM-07@2026-12-06,EM-06@2026-11-29 | EM-07@2026-12-06,,,Pass
+RG08,Baseline win-back,EM-06@2026-10-09 | EM-07@2026-10-16,EM-06@2026-10-09 | EM-07@2026-10-16,,,Pass
+RG09,S4 win-back customer repurchases,EM-06@2026-09-30 | EM-06@2026-12-02 | EM-07@2026-12-09,EM-06@2026-09-30 | EM-06@2026-12-02 | EM-07@2026-12-09,,"R2: EM-07 cancelled, purchase",Pass
+RG10,No-permission check,no emails,no emails,,"R1: no permission, all emails blocked",Pass
